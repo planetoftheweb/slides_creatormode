@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>02_01
+          --
+          Exploring GraphQL</title>
+      <link rel="stylesheet" href="../../../css/twemoji-amazing.css"/>
+    <link rel="stylesheet" href="../../../css/bootstrap-rayveal.css"/>
+    <link rel="stylesheet" href="../../../css/fontawesome.css"/>
+    <link rel="stylesheet" href="../../../css/twemoji-amazing.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@200;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/default.min.css">
+    <link rel="stylesheet" href="../../../css/syntax/nord.css"/>
+    <link rel="stylesheet" href="../../../css/notes_override.css"/>
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+  </head>
+  <body class="bg-subdued">
+    <div class="post post-sidebar container-fluid">
+      <div class="row justify-content-md-center">
+        <aside class="aside aside-main col col-md-3 col-lg-2 gx-0">
+            <nav class="sticky-top fw-medium lh-sm pt-2 ">
+              <h3 class="text-secondary">All Docs</h3>
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2  bg-primary ">
+                    <a class="text-decoration-none  fw-bolder link-light  link-primary" href="../../../notes/slides/02_01/index.html">
+                      <i class="fas fa-file-alt mr-2 lh-1  text-light "></i>02_01
+                      Exploring GraphQL</a>
+                    <a class=" link-light  flex-fill ml-3 text-right" href="../../../?d=02_01&#">
+                      <i class="fab fa-slideshare"></i>
+                    </a>
+                  </div>
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 ">
+                    <a class="text-decoration-none  link-secondary  link-primary" href="../../../notes/slides/02_02/index.html">
+                      <i class="fas fa-file-alt mr-2 lh-1  text-primary "></i>02_02
+                      Building Queries</a>
+                    <a class=" link-secondary  flex-fill ml-3 text-right" href="../../../?d=02_02&#">
+                      <i class="fab fa-slideshare"></i>
+                    </a>
+                  </div>
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 ">
+                    <a class="text-decoration-none  link-secondary  link-primary" href="../../../notes/slides/02_03/index.html">
+                      <i class="fas fa-file-alt mr-2 lh-1  text-primary "></i>02_03
+                      Authorizing with GraphQL</a>
+                    <a class=" link-secondary  flex-fill ml-3 text-right" href="../../../?d=02_03&#">
+                      <i class="fab fa-slideshare"></i>
+                    </a>
+                  </div>
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 ">
+                    <a class="text-decoration-none  link-secondary  link-primary" href="../../../notes/slides/99_01/index.html">
+                      <i class="fas fa-file-alt mr-2 lh-1  text-primary "></i>99_01
+                      Next Steps</a>
+                    <a class=" link-secondary  flex-fill ml-3 text-right" href="../../../?d=99_01&#">
+                      <i class="fab fa-slideshare"></i>
+                    </a>
+                  </div>
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 ">
+                    <a class="text-decoration-none  link-secondary  link-primary" href="../../../notes/slides/index/index.html">
+                      <i class="fas fa-file-alt mr-2 lh-1  text-primary "></i>index
+                      NYU</a>
+                    <a class=" link-secondary  flex-fill ml-3 text-right" href="../../../?d=index&#">
+                      <i class="fab fa-slideshare"></i>
+                    </a>
+                  </div>
+                </nav>
+          </aside>
+
+        <main class="main col col-md-6 col-lg-8">
+          <!-- .slide: data-state="layout-title" class="bg-dark"-->
+<h1 id="exploring-graphql">Exploring GraphQL <a class="direct-link" href="#exploring-graphql"> </a></h1>
+<div class="slide-link"><a href="https://go.raybo.org/2seq"><i class="fab fa-slideshare"></i> go.raybo.org/2seq</a></div>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>Before we get going with GraphQL, let's talk about what it is, and how you can use it with Github.</p>
+<hr>
+<h1 id="graphql">GraphQL <a class="direct-link" href="#graphql"> </a></h1>
+<ul>
+<li><a href="https://graphql.org/">Query Language</a></li>
+<li>Get what you need</li>
+<li>From Facebook</li>
+<li>Open Source</li>
+</ul>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>GraphQL is an open source Query Language for managing data on a server.</p>
+<p>What makes it unique is that it lets you retrieve everyting you need in a single call. You get a lot of information quicker than with traditional REST APIs and in less requests to the server.</p>
+<p>Like React, GraphQL was created by facebook and has been running their mobile apps since 2012, which in web years, it's real long time. Just imagine how efficient and fast it has to be to run all the data from Facebook.</p>
+<p>It's been an open source project that runs under it's own foundation since 2018. It's also used by Github and many other companies, so it's battle tested.</p>
+<hr>
+<h1 id="github-graphql">GitHub GraphQL <a class="direct-link" href="#github-graphql"> </a></h1>
+<ul>
+<li>Account Info</li>
+<li><a href="https://docs.github.com/en/free-pro-team@latest/graphql/overview/explorer">GraphQL Explorer</a></li>
+</ul>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>Github's version allow you to look up the information about your account and repositories and is a good place to get some practical experience with GraphQL.</p>
+<p>If you want to play around with your data, you can use the <img src="http://pixelprowess.com/i/2021-01-12_00-55-33.png" alt="The Github GraphQL Explorer"></p>
+<p>This lets you use your real, live production data from Github as if you were in an app that's already authenticated. The Explorer also has a lot of built in documentation.</p>
+<p>On the left hand side, there's a spot to type in your query (1), you should see a basic query that will get your login.</p>
+<pre><code>query { 
+  viewer { 
+    login
+  }
+}
+</code></pre>
+<hr>
+<h1 id="graphql-explorer">GraphQL Explorer <a class="direct-link" href="#graphql-explorer"> </a></h1>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>If you hit the play button(2), you can see the results on the right hand side (3). The results are in JSON (JavaScript Object Notation) format, which is easily consumed by JavaScript.</p>
+<p>You'll notice that the GraphQL request Syntax is something close to JSON or JavaScript Object Notation.</p>
+<p>What your receive back is JSON (JavaScript Object Notation), which is easy to digest into JavaScript.</p>
+<p>When you make a request on the right hand side, you'll see a documentation button on the right hand side which will open a new tab</p>
+<p><img src="http://pixelprowess.com/i/2021-01-12_01-05-13.png" alt="Documentation"></p>
+<p>This section will change depending on your query and it allows you to search through the GraphQL docs.</p>
+<p>There's also three tabs named <code>prettify</code> which will clean up the indending of your code, <code>history</code>, which goes through all the queries you've made and <code>Explorer</code>, which lets you navigate through the documentation via an index.</p>
+<p>There's a section at the bottom that lets you try out different variables to use with your data as well.</p>
+<p>Before we get going, make sure you log into your account and take a peek at the graphQL explorer. It's a lot of fun.</p>
+
+        </main>
+        <aside class="aside aside-supplemental col col-md-3 col-lg-2 d-none d-md-block">
+          <nav class="sticky-top">
+            <h3 class="pt-2">This Slide</h3>
+            <div class="">
+                <ol>
+                    
+                    <li><a href="#exploring-graphql">Exploring GraphQL  </a>
+            		</li>
+
+                    <li><a href="#graphql">GraphQL  </a>
+            		</li>
+
+                    <li><a href="#github-graphql">GitHub GraphQL  </a>
+            		</li>
+
+                    <li><a href="#graphql-explorer">GraphQL Explorer  </a>
+            		</li>
+                </ol>
+            </div>
+          </nav>
+        </aside>
+      </div>
+    </div>
+  </div>
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+</html>
